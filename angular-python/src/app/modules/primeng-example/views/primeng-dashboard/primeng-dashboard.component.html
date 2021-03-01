@@ -1,0 +1,20 @@
+<form [formGroup]="form">
+    <input formControlName="name" placeholder="輸入Customer name">
+</form>
+<button (click)="search()">Search</button>
+<p-table [value]="customers">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.age}}</td>
+        </tr>
+    </ng-template>
+</p-table>
