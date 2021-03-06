@@ -4,7 +4,7 @@ from flask_cors import CORS, cross_origin #若沒有的話可以先: pip install
 from flask_socketio import SocketIO #若沒有的話可以先: pip install flask_socketio
 import json
 
-import sqliteExample as sqliteExample # 加載 weatherCrawer
+import sqliteExample as sqliteExample # 加載 sqliteExample 資料庫操作 function 集合
 
 app = Flask(__name__)
 CORS(app)#把瀏覽器 cors 跨域API遮擋打開

@@ -13,6 +13,7 @@ export class MaterialDashboardComponent implements OnInit {
   constructor(private customerService:CustomerService) { }
 
   ngOnInit(): void {
+    //去跟 customer.service.ts 要資料
     this.customerService.getCustomers().subscribe(
       customers=>{
         this.dataSource = customers;

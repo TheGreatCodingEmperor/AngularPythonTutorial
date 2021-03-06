@@ -19,6 +19,7 @@ export class PrimengDashboardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    //去跟 customer.service.ts 要資料
     this.customerService.getCustomers().subscribe(
       (customers)=>{
         this.customers = customers;
@@ -28,6 +29,7 @@ export class PrimengDashboardComponent implements OnInit {
     )
   }
 
+  /** @summary 去跟 customer service 要資料(帶有查詢條件) */
   search(){
     alert(this.form.get('name').value);
     this.customerService.getSpecificCustomerFromDb(this.form.get('name').value).subscribe(
